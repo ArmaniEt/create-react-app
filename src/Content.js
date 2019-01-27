@@ -7,14 +7,17 @@ const Cards = (props) => {
         <div>
             <Card color="dark">
                 <CardBody>
-                    <CardTitle className='text-white'>Card title</CardTitle>
+                    <CardTitle className='text-white'>{props.flightTitle}</CardTitle>
                 </CardBody>
-                <img src={props.flightImage} width= "285px"/>
+                <img src={props.flightImage} height="150px" width= "285px"/>
                 <CardBody>
-                    <CardText className="text-white">Some quick example text to build on the card title and make up the bulk of the card's
-                        content.</CardText>
-                    <CardLink href="#">Card Link</CardLink>
-                    <CardLink href="#">Another Link</CardLink>
+                    <CardText className="text-white">
+                        <p>{props.date}</p>
+                        <p>{props.price}</p>
+                        <p>{props.flightNumber}</p>
+                    </CardText>
+                    <CardLink href="#">{props.buyTicket}</CardLink>
+                    <CardLink href="#">{props.view}</CardLink>
                 </CardBody>
             </Card>
         </div>
