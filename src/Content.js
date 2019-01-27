@@ -12,9 +12,13 @@ const Cards = (props) => {
                 <img src={props.flightImage} height="150px" width= "285px"/>
                 <CardBody>
                     <CardText className="text-white">
-                        <p>{props.date}</p>
-                        <p>{props.price}</p>
-                        <p>{props.flightNumber}</p>
+                        {props.date}
+                    </CardText>
+                    <CardText className="text-white">
+                        {props.price}
+                    </CardText>
+                    <CardText className="text-white">
+                        {props.flightNumber}
                     </CardText>
                     <CardLink href="#">{props.buyTicket}</CardLink>
                     <CardLink href="#">{props.view}</CardLink>
